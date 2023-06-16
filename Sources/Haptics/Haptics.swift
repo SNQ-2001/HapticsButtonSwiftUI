@@ -9,17 +9,17 @@ import class UIKit.UIImpactFeedbackGenerator
 import class UIKit.UINotificationFeedbackGenerator
 import class UIKit.UISelectionFeedbackGenerator
 
-func playFeedbackHaptic(_ style: UIImpactFeedbackGenerator.FeedbackStyle) {
+public func playFeedbackHaptic(_ style: UIImpactFeedbackGenerator.FeedbackStyle) {
     let generator = UIImpactFeedbackGenerator(style: style)
     generator.impactOccurred()
 }
 
-func playNotificationHaptic(_ type: UINotificationFeedbackGenerator.FeedbackType) {
+public func playNotificationHaptic(_ type: UINotificationFeedbackGenerator.FeedbackType) {
     let generator = UINotificationFeedbackGenerator()
     generator.notificationOccurred(type)
 }
 
-func playSelectionHaptic() {
+public func playSelectionHaptic() {
     let generator = UISelectionFeedbackGenerator()
     generator.selectionChanged()
 }
