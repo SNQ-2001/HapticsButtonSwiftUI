@@ -9,7 +9,7 @@ import class UIKit.UIImpactFeedbackGenerator
 import class UIKit.UINotificationFeedbackGenerator
 import class UIKit.UISelectionFeedbackGenerator
 
-public func playFeedbackHaptic(_ style: UIImpactFeedbackGenerator.FeedbackStyle) {
+public func playImpactHaptic(_ style: UIImpactFeedbackGenerator.FeedbackStyle) {
     let generator = UIImpactFeedbackGenerator(style: style)
     generator.impactOccurred()
 }
@@ -32,7 +32,7 @@ public enum Haptics {
     public func play() {
         switch self {
         case let .impact(style):
-            playFeedbackHaptic(style)
+            playImpactHaptic(style)
         case let .notification(type):
             playNotificationHaptic(type)
         case .selection:
