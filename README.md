@@ -33,7 +33,7 @@ or
 ```swift
 import Haptics
 
-playFeedbackHaptic(.medium)
+playImpactHaptic(.medium)
 ```
 
 ## License
