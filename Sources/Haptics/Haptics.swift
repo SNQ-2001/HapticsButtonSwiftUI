@@ -9,16 +9,19 @@ import class UIKit.UIImpactFeedbackGenerator
 import class UIKit.UINotificationFeedbackGenerator
 import class UIKit.UISelectionFeedbackGenerator
 
+@available(*, deprecated, message: "Use `Haptics.impact(***).play()`")
 public func playImpactHaptic(_ style: UIImpactFeedbackGenerator.FeedbackStyle) {
     let generator = UIImpactFeedbackGenerator(style: style)
     generator.impactOccurred()
 }
 
+@available(*, deprecated, message: "Use `Haptics.notification(***).play()`")
 public func playNotificationHaptic(_ type: UINotificationFeedbackGenerator.FeedbackType) {
     let generator = UINotificationFeedbackGenerator()
     generator.notificationOccurred(type)
 }
 
+@available(*, deprecated, message: "Use `Haptics.selection.paly()`")
 public func playSelectionHaptic() {
     let generator = UISelectionFeedbackGenerator()
     generator.selectionChanged()
@@ -39,4 +42,8 @@ public enum Haptics {
             playSelectionHaptic()
         }
     }
+}
+
+func sas() {
+    Haptics.impact(style).play()
 }
