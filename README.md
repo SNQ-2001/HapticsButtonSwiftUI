@@ -33,6 +33,14 @@ or
 ```swift
 import Haptics
 
+Haptics.impact(.medium).play()
+```
+
+or
+
+```swift
+import Haptics
+
 playImpactHaptic(.medium)
 ```
 
