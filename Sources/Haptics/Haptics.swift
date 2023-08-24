@@ -43,7 +43,3 @@ public enum Haptics {
         }
     }
 }
-
-func sas() {
-    Haptics.impact(style).play()
-}
